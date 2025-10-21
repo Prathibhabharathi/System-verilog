@@ -34,5 +34,11 @@ module tb();
      intf.d=1;
      $finish;
    end
+           initial begin
+  $dumpfile("waveform.vcd"); 
+  $dumpvars(0,tb); 
+
+end
+
 endmodule
     
