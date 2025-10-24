@@ -1,0 +1,46 @@
+// Code your design here
+module mailbox_ex;
+  mailbox mbox;
+  int data;
+  initial begin
+    mbox = new();
+    fork
+      //1
+      begin
+        for(int i=0;i<3;i++)
+          begin
+            $display("first mail:printing the first %d",i);
+            mbox.put(i);
+          end
+      end
+      
+      //2
+        begin
+          for(int i=0;i<3;i++)
+            begin
+              mbox.get(data);
+              $display("second mail:printing the second %d",data);
+            end
+        end
+        
+        join
+      
+  end
+endmodule
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
