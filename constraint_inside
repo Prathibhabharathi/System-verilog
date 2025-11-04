@@ -1,0 +1,24 @@
+// Code your design here
+class packet;
+  rand bit [3:0]addr;
+  rand bit [2:0]start_addr;
+  rand bit [3:0]end_addr;
+
+constraint addr_range{addr inside{[start_addr:end_addr]};
+                     }
+  endclass
+module constraintblock;
+  initial begin
+    packet pkt;
+    pkt=new();
+    repeat(10) begin
+    pkt.randomize();
+      if(pkt.randomize()) begin
+        $display("\taddr=%0d start_addr =%0d end_addr=%0d",pkt.addr,pkt.start_addr,pkt.end_addr);
+  end else begin
+    $display("randomization failed.");
+  end
+  end
+  end
+    endmodule
+    
