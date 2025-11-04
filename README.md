@@ -3,3 +3,10 @@ Interface:  All related signals are grouped together to form an interface block 
 Signals connected to the DUT should support 4-states so that X/Z values can be caught
 🔹Clocking blocks → Synchronize driving and sampling of signals with clock edges.
 🔹Modports → Define direction of signals for different roles (e.g., DUT vs TB).
+
+
+
+constraint_inside results:
+
+
+<img width="477" height="330" alt="image" src="https://github.com/user-attachments/assets/11a9c14c-a207-4356-b81e-357abb8265d1" />
